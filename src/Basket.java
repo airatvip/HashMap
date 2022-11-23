@@ -22,10 +22,11 @@ public class Basket {
 
     public static void addProduct(Product product) {
         if (product.getPrice() == 0) {
-            throw new RuntimeException("Заполните карточку товара");
-        } else if (basket.contains(product)) {
+        }
+        if (basket.contains(product)) {
             throw new RuntimeException("Такой товар есть в корзине");
         } else basket.add(product);
-    }
 
+
+    }
 }

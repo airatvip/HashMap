@@ -95,18 +95,18 @@ public class Main {
 
         System.out.println(sum.entrySet());
         Map<String, Integer> sum2 = new HashMap<>();
-        for (List<Integer> value : sum.values()) {
-//            System.out.println(value);
-            int sum1 = 0;
-            for (int i = 0; i < value.size(); i++) {
-                sum1 += value.get(i);
-            }
+        sum.forEach((key, value) -> {
+                    //            System.out.println(value);
+                    int sum1 = 0;
+                    for (int i = 0; i < value.size(); i++) {
+                        sum1 += value.get(i);
+                    }
 //            System.out.println(sum1);
+                    sum2.put(key, sum1);
+                }
+        );
 
-            for (String s : sum.keySet()) {
-                sum2.put(s, sum1);
-            }
-        }
+
         System.out.println(sum2.entrySet());
 
         //________________Задание 2.2__________________________________________________________________
