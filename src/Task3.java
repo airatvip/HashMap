@@ -6,7 +6,7 @@ public class Task3 {
     private Map<String, Integer> map = new HashMap<>();
 
     public void add(String K, Integer V) {
-        if (map.containsKey(K) && map.get(K) == V) {
+        if (map.containsKey(K) && map.get(K).equals(V)) {
             throw new RuntimeException("Такие значения уже есть в коллекции");
         } else map.put(K, V);
     }
